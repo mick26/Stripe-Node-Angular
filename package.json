@@ -1,20 +1,12 @@
 {
   "name": "stripe-node-angular",
   "version": "0.0.1",
+  "author": "Michael Cullen",
   "description": "stripe with node, express & Angular",
-  "main": "server.js",
   "private": "true",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "nodejs",
-    "express",
-    "angular",
-    "bootstrap3",
-    "stripe"
-  ],
-  "author": "Michael Cullen",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.10.1",
