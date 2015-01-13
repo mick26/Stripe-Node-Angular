@@ -1,0 +1,68 @@
+
+
+<div class="container">              
+
+  <br/>
+  <a href="#/">Go to Home Page</a>
+  <br/>
+  
+  <div class="well">
+    <strong>Use these test Card details to test the App</strong>  
+    <ul>
+      <li> Card Number - 4242 4242 4242 4242</li>
+      <li> CVC Code - any three digits</li>
+      <li> Expiration - any date in the future</li>
+    </ul>
+  </div>
+
+  <ul>
+    <li>Add card details to Stripe server.</li>
+    <li>Stripe returns a token.</li>
+    <li>Create a customer object containing token and other details.</li>
+    <li>Send customer object to Node</li>
+    <li>Node adds the customer details to Stripe</li>
+  </ul>
+
+  <form id="payment-form" method="post" novalidate style='max-width: 300px;'>
+
+    <!-- <div id="charge-error" class="alert alert-danger payment-errors"> -->
+
+    <div class="form-group">
+
+        <div class="form-row">
+          <label> Credit Card Info</label>
+          <input class="card-number form-control" type='text' autocomplete='off' data-stripe='number' placeholder='Card Number' ng-model="card.number" />
+        </div>
+
+        <div class="form-row">
+          <input class="card-cvc form-control" type='text' autocomplete='off' data-stripe='cvc' placeholder='CVC Code' ng-model="card.cvc" />
+        </div>
+
+        <div class="form-row">
+          <label>Expiration Date</label>
+          <br/>
+          <input class="card-expiry-month form-control" type='text' data-stripe='exp-month' placeholder='MM' ng-model="card.exp_month" />
+          <input class="card-expiry-year form-control" type='text' data-stripe='exp-year' placeholder='YYYY' ng-model="card.exp_year" />
+        </div>
+
+    </div>
+
+    <br/>
+    <button class="btn btn-primary submit-button" type='submit' ng-click="addCustomer()">Submit Card Details & Add Customer</button>
+  </form>
+
+</div>
+
+
+<div>
+
+  <button class="btn btn-danger" type='submit' ng-click="getCustomers()">Get Last Customer Object from Stripe Server</button>
+
+  <table> 
+    <tr ng-repeat="(key, value) in customers">
+      <td>{{value}}</td>
+    </tr>
+  </table>
+
+</div>
+
