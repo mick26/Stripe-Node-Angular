@@ -14,7 +14,7 @@ To use this App a Stripe account needs to be created. Stripe provides test API k
 On the Node server you need to enter your Stripe API keys in:
 <pre>/server/config/stripe-keys.js</pre>
 
-On the client you need to enter the Stripe Key in:
+On the client you need to enter the Stripe Test Publishable Key in:
 <pre>controllers.js</pre>
 <br/>
 
@@ -37,15 +37,13 @@ Ensure the path to the files is correct in server.js.
 
 ### Running the App
 
-Ensure that:
-+ the SSL files are set up
-+ the Stripe API keys are entered 
-
-Then:
-
 - clone the repository
 - npm install
 - bower install
 - node server.js
 - browse to https://localhost:3300
 
+Ensure that:
+
++ the SSL files are set up
++ the Stripe API keys are entered 

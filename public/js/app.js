@@ -1,15 +1,13 @@
 'use strict';
 
-
-/**
- * Module - Main App module 
- */
+/*================================================
+Module - Main App Module
+================================================ */
 angular.module('stripeApp', ['ngRoute', 'stripeApp.controllers'])
 
 
 .config( function($routeProvider, $locationProvider, $httpProvider) {
   
-
   /*================================================
   Define all the Routes
   ================================================ */
